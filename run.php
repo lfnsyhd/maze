@@ -173,8 +173,10 @@ class MazeGenerator
     public function display()
     {
         foreach ($this->maze as $block => $maze) {
+            $this->direction = ["D","U","L","R"];
+            // shuffle($this->direction);
+            // var_dump($this->direction);
             $this->create($block);
-            shuffle($this->direction);
             $this->setPosition();
         }
         $i = 0;
